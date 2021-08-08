@@ -28,11 +28,15 @@ Modules:
 
 ## Development mode
 
-    $ npm run develop
+    $ yarn run develop
 
 ## Build for production
 
-    $ npm run build
+    $ yarn run build
+
+## Watch
+
+    $ yarn run watch
 
 ## TODO
 
