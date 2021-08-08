@@ -1,0 +1,30 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "my project",
+  "main": "assets/theme/website.js",
+  "license": "ISC",
+  "private": true,
+  "scripts": {
+    "clear": "rm -rf .parcel-cache && rm -rf ./assets && mkdir -p assets/theme",
+    "build": "npm run clear && npm run buildAdditionalAsstes && parcel build ./theme/website.html",
+    "develop": "npm run clear && zx ./start_server_and_watch_theme.mjs",
+    "server": "composer run start",
+    "modernizr": "modernizr -c modernizr-config.json -d assets/js",
+    "svgSprites": "svg-sprite --symbol --symbol-inline --symbol-example --symbol-dest=sprites --dest=assets theme/svg/icons/*.svg",
+    "watch": "npm run clear && npm run buildAdditionalAsstes && parcel watch ./theme/website.html",
+    "buildAdditionalAsstes": "for app in modernizr svgSprites; do npm run $app; done"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "2.0.0-rc.0",
+    "autoprefixer": "^10.3.1",
+    "include-media": "^1.4.10",
+    "modernizr": "^3.11.7",
+    "normalize.css": "^8.0.1",
+    "parcel": "^2.0.0-rc.0",
+    "parcel-namer-without-hash": "^0.0.1",
+    "postcss": "^8.1.0",
+    "svg-sprite": "^1.5.1",
+    "zx": "^2.0.0"
+  }
+}

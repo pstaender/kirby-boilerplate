@@ -1,0 +1,10 @@
+/.parcel-cache
+yarn-error.log
+node_modules/
+# ignoring vendor and composer / npm locks are a matter if taste, so remove if you wanna keep them in git
+/vendor
+/yarn.lock
+/package-lock.json
+/composer.lock
+# all generated assets are placed in /assets
+/assets
