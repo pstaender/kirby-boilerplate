@@ -5,6 +5,7 @@
   "main": "assets/theme/website.js",
   "license": "ISC",
   "private": true,
+  "browser": true,
   "scripts": {
     "clear": "rm -rf .parcel-cache && rm -rf ./assets && mkdir -p assets/theme",
     "build": "npm run clear && npm run buildAdditionalAsstes && parcel build ./theme/website.html",
@@ -15,7 +16,7 @@
     "watch": "npm run clear && npm run buildAdditionalAsstes && parcel watch ./theme/website.html",
     "buildAdditionalAsstes": "for app in modernizr svgSprites; do npm run $app; done"
   },
-  "devDependencies": {
+  "dependencies": {
     "@parcel/transformer-sass": "2.0.0-rc.0",
     "autoprefixer": "^10.3.1",
     "include-media": "^1.4.10",
